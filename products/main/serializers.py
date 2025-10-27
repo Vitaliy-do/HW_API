@@ -8,7 +8,7 @@ from .models import Product, Review
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ['__al__']
+        fields = ['__all__']
     # реализуйте все поля
 
 class ProductListSerializer(serializers.Serializer):
