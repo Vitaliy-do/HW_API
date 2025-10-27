@@ -24,5 +24,5 @@ class ProductDetailsView(APIView):
             ser = ProductDetailsSerializer(prod, many=False)
             return Response(ser.data)
         except Product.DoesNotExist:
-            raise Http404('Нет такого товара')
+            raise Response(status=404)
 
