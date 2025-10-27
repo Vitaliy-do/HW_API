@@ -20,7 +20,7 @@ def products_list_view(request):
 class ProductDetailsView(APIView):
     def get(self, request, product_id):
         try:
-            prod = Product.objects(pk=product_id)
+            prod = Product.objects.get(pk=product_id)
             ser = ProductDetailsSerializer(prod, many=False)
             return Response(ser.data)
         except Product.DoesNotExist:
