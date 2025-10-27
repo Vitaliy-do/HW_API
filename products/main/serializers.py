@@ -13,7 +13,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class ProductListSerializer(serializers.Serializer):
     title = serializers.CharField()
-    price = serializers.DecimalField(10, 2)
+    price = serializers.DecimalField(max_digits=10, decimal_places=2)
     # реализуйте поля title и price
 
 class ProductDetailsSerializer(serializers.ModelSerializer):
